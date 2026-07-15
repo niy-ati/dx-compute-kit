@@ -1,0 +1,10 @@
+{
+	"name": "dx-compute-kit",
+	"description": "DirectX compute prep kit for dcompute/LDC: DXIL metadata checks, HLSL saxpy, host notes.",
+	"authors": ["Niyati Jain"],
+	"license": "MIT",
+	"copyright": "Copyright © 2026, Niyati Jain",
+	"targetType": "executable",
+	"targetName": "dx-compute-kit",
+	"dependencies": {}
+}

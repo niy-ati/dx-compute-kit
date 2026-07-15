@@ -1,0 +1,14 @@
+.dub/
+*.exe
+*.obj
+*.o
+*.pdb
+*.ilk
+*.dll
+kernels/out/
+*.dxil
+*.cso
+host/*.obj
+host/*.exe
+host/*.pdb
+.DS_Store

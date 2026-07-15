@@ -12,4 +12,4 @@ This kit sits in the **dcompute / LDC DirectX** domain. Keep changes focused and
 - Document **why** (e.g. “LLVM test X requires attr Y”), not only what.  
 - Prefer user-visible / mentor-visible outcomes: failing fixtures, DXIL on disk, clearer backend map.  
 - Do not claim this *is* LDC `targetDirectX` or official dcompute until it lands upstream.  
-- Do not mix DUB-tooling work into this tree — that lives elsewhere (`dub-watch`).
+- Keep this repository focused on DirectX compute reference work; do not mix unrelated tooling.

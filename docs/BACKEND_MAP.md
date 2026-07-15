@@ -1,24 +1,22 @@
-# dx-compute-kit — BACKEND_MAP (short)
+# Backend map
 
-Where this sits relative to existing dcompute backends:
+How DirectX fits relative to existing dcompute targets:
 
-| Backend | Device IR / bitcode | Host launch |
-|---------|---------------------|-------------|
+| Backend | Device IR | Host |
+|---------|-----------|------|
 | CUDA | PTX | CUDA runtime |
-| OpenCL | SPIR-V (ocl) | OpenCL |
-| Vulkan (GSoC track) | SPIR-V (vulkan) | Vulkan |
-| Metal (GSoC track) | Metal IR / metallib | Metal ObjC |
-| **DirectX (this kit)** | **DXIL** | **D3D12** |
+| OpenCL | SPIR-V | OpenCL |
+| Vulkan | SPIR-V | Vulkan |
+| Metal | Metal IR | Metal |
+| DirectX (this kit) | DXIL | D3D12 |
 
-LDC metadata for DirectX compute (what fixtures check):
+Metadata checked by the fixtures:
 
-- triple: `dxil-pc-shadermodelN.M-compute`
+- triple: `dxil-pc-shadermodelN.M-compute` (or `-library`)
 - `"hlsl.shader"="compute"`
 - `"hlsl.numthreads"="X,Y,Z"`
 - optional before prepare: `"exp-shader"="cs"`
 
-Wrapper note (same idea as Vulkan): D `@kernel` body can stay a “core”
-function; a zero-arg `*_kernel` entry holds the HLSL attrs and unpacks an
-arg buffer. The saxpy host here uses a normal DXC root signature (UAV + CBV),
-i.e. the **proven host path**. LDC’s provisional arg-buffer ABI is still being
-debugged against D3D12 PSO creation — do not confuse the two.
+This kit’s D3D12 host uses a conventional DXC root signature (CBV + UAVs).
+That is the proven host path. An LDC DirectX backend may additionally use a
+wrapper entry and resource intrinsics; that ABI is outside the saxpy host here.

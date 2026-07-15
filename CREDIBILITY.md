@@ -1,30 +1,28 @@
-# Credibility notes (personal — do not paste wholesale)
+# Notes (not published docs)
 
-## Resume line (dx-compute-kit)
+Forum / résumé drafts. Do not ship this file as product documentation if you prefer a cleaner tree — optional to delete before public release.
+
+## Résumé line
 
 Author of `dx-compute-kit` — HLSL saxpy → DXIL → D3D12 host with CPU-verified
-results (N=1024), plus IR fixtures for the `hlsl.shader` / `hlsl.numthreads`
-shape LDC `targetDirectX` needs.
+results, plus IR fixtures for DirectX compute metadata used by LDC DirectX work.
 
-## Forum draft — new thread in General (or Announce if you feel solid)
+## Forum draft (new thread in General)
 
-**Subject:** dx-compute-kit — HLSL→DXIL→D3D12 saxpy E2E (dcompute / DirectX host)
+**Subject:** dx-compute-kit — HLSL→DXIL→D3D12 saxpy E2E
 
 ```
 hi,
 
-published a small DirectX compute path aimed at the dcompute/LDC lane:
+published a small DirectX compute reference for the dcompute/LDC lane:
 
   - HLSL saxpy → DXIL (dxc)
-  - D3D12 host: dispatch + readback + CPU verify (PASS on hardware)
-  - IR fixtures for the hlsl.shader / hlsl.numthreads / dxil triple shape
+  - D3D12 host: dispatch + readback + CPU verify
+  - IR fixtures for hlsl.shader / hlsl.numthreads / dxil triple
 
-one command on Windows: run_e2e.bat
+Windows: run_e2e.bat
 
 repo: <URL>
 
-this is the host + DXIL half; LDC codegen is separate work. feedback welcome
-from people who have hit DXIL / D3D12 compute quirks.
+this is the host + DXIL half; LDC codegen is separate. feedback welcome.
 ```
-
-Do not reply under the official SAOC announce thread.

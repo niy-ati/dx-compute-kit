@@ -2,8 +2,6 @@
 setlocal
 cd /d "%~dp0"
 
-set "PATH=C:\Users\niyat\New folder\dcompute-spike\ldc2-1.41.0-windows-multilib\bin;%PATH%"
-
 echo === 1/4 build dx-compute-kit ===
 call dub build
 if errorlevel 1 exit /b 1
@@ -22,7 +20,7 @@ set ERR=%ERRORLEVEL%
 if not "%ERR%"=="0" exit /b %ERR%
 
 echo.
-echo === fixtures (IR shape checks) ===
+echo === fixtures ===
 .\dx-compute-kit.exe --quiet
 if errorlevel 1 exit /b 1
 

@@ -1,6 +1,6 @@
 {
 	"name": "dx-compute-kit",
-	"description": "DirectX compute prep kit for dcompute/LDC: DXIL metadata checks, HLSL saxpy, host notes.",
+	"description": "Reference DirectX compute path for dcompute/LDC: HLSL→DXIL→D3D12 saxpy E2E and IR metadata fixtures.",
 	"authors": ["Niyati Jain"],
 	"license": "MIT",
 	"copyright": "Copyright © 2026, Niyati Jain",
